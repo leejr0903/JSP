@@ -1,20 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>ajax.jsp</title>
 </head>
 <body>
 <!-- 
 미완성
 
  -->
-<form name="ajax_action" id="ajax_action" >
+<form action="" name="ajax_action" id="ajax_action" method="post">
 <table>
 <tr>
-	<th scope="row" class="item"><label class="head" for="lblpjrp_type_cd"> 연관프로젝트 <span class="required" title="필수입력">*</span></label></th>
+	<th scope="row" ><label class="head" for="lblpjrp_type_cd"> 연관프로젝트 <span class="required" title="필수입력">*</span></label></th>
 	<td>
 	
 	<select name="pj_sno" id="lblpj_sno"  class="select">
@@ -43,11 +42,11 @@
 					  },
 					  function(data) {
 						  
-						  /*
+
 						  for(var i=0; i <data.length; i++) {
-								console.log(data[i].value);
+								console.log(data[i].name);
 						  }
-						  */
+
 						  /*
 						  $('#lbltask_sno').empty();
 						  
@@ -62,7 +61,8 @@
   						        options += '<option' + data[i].task_sno.equals() ? "selected" : "" + 'value="' + data[i].task_sno + '">' + data[i].title + '</option>';
   						       }
   						  	$("select#lbltask_sno").html(options);
-  							*/
+  						  	*/
+  							
 					  });
 			
 		});
