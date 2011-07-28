@@ -7,12 +7,12 @@
 <title>JavaScript</title>
 </head>
 <script type="text/javascript">
-
+	
 </script>
 
 <body>
 
-<form action="action.jsp">
+<form action="action.jsp" name="action" id="lblaction" method="post" >
 
 <table>
 	<tr>
