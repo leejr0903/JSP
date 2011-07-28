@@ -1,0 +1,1 @@
+WEB_INF/classes ==> WEB_INF/properties로 대체

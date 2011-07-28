@@ -1,30 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
-    
-<%@ page import="org.apache.log4j.Category" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
+<%@ page contentType="text/html;charset=MS949"  import="org.apache.log4j.Logger" %>
 
-<% new LogTest().go(); %>
 <%!
-public class LogTest {
-	Category log = Category.getInstance(LogTest.class.getName()); 
-	public LogTest(){}
- 
-	public void go(){
-	log.fatal("log4j test °¡Àå Å©¸®Æ¼ÄÃÇÑ ¿¡·¯°¡ ³µÀ»¶§");
-	log.error("log4j test ÀÏ¹İ ¿¡·¯°¡ ÀÏ¾î ³µÀ» ¶§ »ç¿ë");
-	log.warn("log4j test ¿¡·¯´Â ¾Æ´ÏÁö¸¸ ÁÖÀÇÇÒ ÇÊ¿ä°¡ ÀÖÀ» ¶§ »ç¿ë");
-	log.info("log4j test ÀÏ¹İ Á¤º¸¸¦ ³ªÅ¸³¾ ¶§ »ç¿ë");
-	log.debug("log4j test ÀÏ¹İ Á¤º¸¸¦ »ó¼¼È÷ ³ªÅ¸³¾ ¶§ »ç¿ë");
-	}
-}
+	static Logger logger = Logger.getLogger("test.jsp");
 %>
 
+<%
+	logger.fatal("fatal!!");
 
-</body>
-</html>
+	logger.fatal("fatal2!!", new NullPointerException("ë„ì…ë‹ˆë‹¤ìš”"));
+
+	logger.error("error!", new NumberFormatException());
+
+	logger.error("error!2");
+
+	logger.warn("warn");
+
+	logger.info("info");
+
+	logger.debug("debug");
+%>

@@ -1,7 +1,8 @@
-#Thu Jul 28 15:03:03 KST 2011
+#Fri Jul 29 00:11:16 KST 2011
 eclipse.preferences.version=1
 encoding//WebContent/program/ajax/ajax.jsp=UTF-8
 encoding//WebContent/program/ajax/json.jsp=UTF-8
 encoding//WebContent/program/iframe/iframe.jsp=UTF-8
 encoding//WebContent/program/iframe/main.jsp=UTF-8
+encoding//WebContent/program/log4j/log4j.jsp=UTF-8
 encoding/<project>=UTF-8

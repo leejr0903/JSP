@@ -11,8 +11,8 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/JSP/MyProject/lib/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="D:/JSP/MyProject/lib/servlet.jar"/>
-	<classpathentry kind="lib" path="D:/JSP/MyProject/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/JSP/Git/JSP/DynamicWebProject/WebContent/WEB_INF/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="D:/JSP/Git/JSP/DynamicWebProject/WebContent/WEB_INF/lib/servlet-api-2.3.jar"/>
+	<classpathentry kind="lib" path="D:/JSP/Git/JSP/DynamicWebProject/WebContent/WEB_INF/lib/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB_INF/classes"/>
 </classpath>
