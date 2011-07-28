@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>ajax.jsp</title>
 
 <script type="text/javascript" src="/DynamicWebProject/jquery/jquery.min.js"></script>
@@ -12,18 +12,18 @@ $(function(){
 	
 		$.getJSON("json.jsp",
 				{
-				// ÇÑ±ÛÀ» ³Ñ±â¸é ±úÁö´Â Çö»óÀÌ ¹ß»ı
+				// í•œê¸€ì„ ë„˜ê¸°ë©´ ê¹¨ì§€ëŠ” í˜„ìƒì´ ë°œìƒ
 		    	pj_sno: $("#lblgo_ajax").val()
 				},
 				  function(data) {
 					
-					// ÄÜ¼Ö¿¡¼­ º¸±â
+					// ì½˜ì†”ì—ì„œ ë³´ê¸°
 					/*
 					for(var i=0; i <data.length; i++) {
 						console.log(data[i].val + " " + data[i].name);
 					}*/
 					
-					// option Ãâ·Â
+					// option ì¶œë ¥
 					// option+=
 					
 					var options = '';
@@ -33,9 +33,9 @@ $(function(){
 					$("select#lblchange_ajax").html(options);
 					
 					
-					// option Ãâ·Â
-					// IE7,8¿¡¼­ µ¿ÀÛ ¾ÈÇÔ
-					// jquery ¹®¹ı
+					// option ì¶œë ¥
+					// IE7,8ì—ì„œ ë™ì‘ ì•ˆí•¨
+					// jquery ë¬¸ë²•
 					/*
 					$('#lbltask_sno').empty();
 					  
@@ -60,10 +60,10 @@ $(function(){
 	</th>
 	<td>
 		<select name="go_ajax" id="lblgo_ajax" class="" >
-				<option value="">¼±ÅÃ</option>
-				<option value="ÇÑ±Û" >ÇÑ±Û</option>
-				<option value="english" >¿µ¾î</option>
-				<option value="9999" >¼ıÀÚ</option>
+				<option value="">ì„ íƒ</option>
+				<option value="í•œê¸€" >í•œê¸€</option>
+				<option value="english" >ì˜ì–´</option>
+				<option value="9999" >ìˆ«ì</option>
 		</select>
 	</td>
 </tr>
