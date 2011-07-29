@@ -14,5 +14,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/servlet-api-2.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/mybatis-3.0.5.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/mysql-connector-java-5.1.17-bin.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB_INF/classes"/>
 </classpath>
