@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>ajax.jsp</title>
 
-<script type="text/javascript" src="/DynamicWebProject/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/DynamicWebProject/program/includejs/jquery-1.6.2.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	$(document.forms.ajax_action.go_ajax).change(function(){

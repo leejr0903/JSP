@@ -1,9 +1,9 @@
-package index;
+package log;
 
 import org.apache.commons.logging.Log;  
 import org.apache.commons.logging.LogFactory;  
 
-public class index {
+public class CommonLoggingTest {
 	  
 	  private static final Log logger = LogFactory.getLog(CommonLoggingTest.class);  
       
@@ -28,9 +28,5 @@ public class index {
 	        if (logger.isFatalEnabled()) {  
 	            logger.fatal("main(String[]) -FATAL");  
 	        }  
-	    } 
-	  
-	public class CommonLoggingTest { 
-	   
-	}  
+	    }  
 }
