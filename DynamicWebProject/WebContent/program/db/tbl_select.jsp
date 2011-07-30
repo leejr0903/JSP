@@ -6,7 +6,7 @@ Connection connect = null;
 PreparedStatement statement = null;
 ResultSet resultSet = null;
 try {    
-	Class.forName("org.gjt.mm.mysql.Driver");
+	Class.forName("com.mysql.jdbc.Driver");
 	
 } catch (ClassNotFoundException ce) {
 	System.out.println(ce);
