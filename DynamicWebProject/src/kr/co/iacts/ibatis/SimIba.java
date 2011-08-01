@@ -3,6 +3,7 @@ package kr.co.iacts.ibatis;
 import java.io.IOException;
 import java.io.Reader;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 
 import com.ibatis.common.resources.Resources;
@@ -34,15 +35,23 @@ public class SimIba {
 	  public static List selectAllAccounts () throws SQLException {
 	    return sqlMapper.queryForList("Account.selectAllAccounts");
 	  }
+	  
+	  public static List selectAll () throws SQLException {
+		    return sqlMapper.queryForList("Account.selectAll"); 
+		  }
 
 	  public static Account selectAccountById  (int id) throws SQLException {
 	    return (Account) sqlMapper.queryForObject("Account.selectAccountById", id);
 	  }
-
+	  
+	  public static void insertAccount (HashMap map) throws SQLException {
+		    sqlMapper.insert("Account.insertAccount", map);
+		  }
+/*  
 	  public static void insertAccount (Account account) throws SQLException {
 	    sqlMapper.insert("Account.insertAccount", account);
 	  }
-
+*/
 	  public static void updateAccount (Account account) throws SQLException {
 	    sqlMapper.update("Account.updateAccount", account);
 	  }

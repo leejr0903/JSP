@@ -16,4 +16,4 @@
 		</dataSource>
 	</transactionManager>
 	<sqlMap url="${ibatis.sqlmap.base}/mysql/Account.xml"/>
-</sqlMapConfig>
+</sqlMapConfig>    

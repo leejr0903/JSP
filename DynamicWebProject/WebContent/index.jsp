@@ -13,6 +13,8 @@
 <!-- ibatis -->
 <a href="http://tjswjd56.springnote.com/pages/1902828">아이바티스 설정 블로그1</a><br />
 <a href="http://www.javajigi.net/pages/viewpage.action?pageId=52">아이바티스 설정 블로그2</a><br />
+<a href="http://www.gurubee.net/pages/viewpage.action?pageId=6261074">아이바티스 설정 블로그3</a><br />
+http://highheat.tistory.com/33?srchid=BR1http%3A%2F%2Fhighheat.tistory.com%2F33
 
 <!-- java 배열 -->
 <a href="http://www.easywayserver.com/jsp/JSP-array.htm">자바 배열 관련</a><br />

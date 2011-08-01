@@ -23,6 +23,10 @@
   <!-- Select with no parameters using the result map for Account class. -->
   <select id="selectAllAccounts" resultMap="AccountResult">
     select * from ACCOUNT
+  </select> 
+  
+  <select id="selectAll" resultClass="java.util.HashMap">
+  	select * from ACCOUNT  
   </select>
 
   <!-- A simpler select example without the result map.  Note the 
@@ -38,6 +42,7 @@
   </select>
    
   <!-- Insert example, using the Account parameter class -->
+     <!-- 
   <insert id="insertAccount" parameterClass="Account">
     insert into ACCOUNT (
       ACC_ID,
@@ -48,6 +53,19 @@
       #id#, #firstName#, #lastName#, #emailAddress#
     )
   </insert>
+   	-->  
+ 
+	<insert id="insertAccount" parameterClass="java.util.HashMap">
+    insert into ACCOUNT (
+      ACC_ID,
+      ACC_FIRST_NAME,
+      ACC_LAST_NAME,
+      ACC_EMAIL
+    values (
+      #id#, #firstName#, #lastName#, #emailAddress#
+    )
+  </insert>
+
 
   <!-- Update example, using the Account parameter class -->
   <update id="updateAccount" parameterClass="Account">
