@@ -7,7 +7,7 @@
 <sqlMap namespace="Account">
 
   <!-- Use type aliases to avoid typing the full classname every time. -->
-  <typeAlias alias="Account" type="com.mydomain.domain.Account"/>
+  <typeAlias alias="Account" type="kr.co.iacts.ibatis.Account"/>
 
   <!-- Result maps describe the mapping between the columns returned
        from a query, and the class properties.  A result map isn't

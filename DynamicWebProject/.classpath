@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="WebContent/WEB_INF/sql"/>
 	<classpathentry kind="src" path="WebContent/WEB_INF/lib"/>
 	<classpathentry kind="src" path="WebContent/WEB_INF/logs"/>
 	<classpathentry kind="src" path="WebContent/WEB_INF/properties"/>
@@ -17,5 +18,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/commons-pool-1.5.6.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/mysql-connector-java-5.1.17-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/ibatis-2.3.4.726.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB_INF/classes"/>
 </classpath>

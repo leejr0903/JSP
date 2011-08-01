@@ -6,6 +6,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent/WEB_INF/properties"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent/WEB_INF/logs"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent/WEB_INF/lib"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent/WEB_INF/sql"/>
         <property name="context-root" value="DynamicWebProject"/>
         <property name="java-output-path" value="/DynamicWebProject/build/classes"/>
     </wb-module>

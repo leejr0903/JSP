@@ -1,29 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMapConfig      
     PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
     "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
-
 <sqlMapConfig>
 
-  <!-- Configure a built-in transaction manager.  If you're using an 
-       app server, you probably want to use its transaction manager 
-       and a managed datasource -->
-  <transactionManager type="JDBC" commitRequired="false">
-    <dataSource type="SIMPLE">
-      <property name="JDBC.Driver" value="org.hsqldb.jdbcDriver"/>
-      <property name="JDBC.ConnectionURL" value="jdbc:hsqldb:."/>
-      <property name="JDBC.Username" value="sa"/>
-      <property name="JDBC.Password" value="sa"/>
-    </dataSource>
-  </transactionManager>
-
-  <!-- List the SQL Map XML files. They can be loaded from the 
-       classpath, as they are here (com.domain.data...) -->
-  <sqlMap resource="com/mydomain/data/Account.xml"/>
-  <!-- List more here...
-  <sqlMap resource="com/mydomain/data/Order.xml"/>
-  <sqlMap resource="com/mydomain/data/Documents.xml"/>
-  -->
-
+	<properties resource="ibatis2common.properties"/>
+	<settings enhancementEnabled="true" useStatementNamespaces="true"/>
+	
+	<transactionManager type="JDBC" commitRequired="true">
+		<dataSource type="${dataSource.type}">
+			<property name="JDBC.Driver" value="${jdbc.driver}"/>
+			<property name="JDBC.ConnectionURL" value="${jdbc.connectionurl}"/>
+			<property name="JDBC.Username" value="${jdbc.username}"/>
+			<property name="JDBC.Password" value="${jdbc.password}"/>	 		
+		</dataSource>
+	</transactionManager>
+	<sqlMap url="${ibatis.sqlmap.base}/mysql/Account.xml"/>
 </sqlMapConfig>
