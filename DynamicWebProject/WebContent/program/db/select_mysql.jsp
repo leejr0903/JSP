@@ -1,8 +1,8 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
 <%@ page import = "java.sql.*" %>
 <%
-String URL = "jdbc:mysql://localhost/mysql";
-String USER = "root";
+String URL = "jdbc:mysql://mysql4.hosting.paran.com/leejr0903_db";
+String USER = "leejr0903";
 String PASS= "password";
 
 Connection conn = null;
@@ -14,12 +14,21 @@ try
   Class.forName("com.mysql.jdbc.Driver");
   conn = DriverManager.getConnection(URL, USER, PASS);
   stmt = conn.createStatement();
-  rs = stmt.executeQuery("SELECT * FROM help_category LIMIT 0 , 30");
+  rs = stmt.executeQuery("SELECT * FROM account");
   while( rs.next() )
   {
-	int help_category_id = rs.getInt("help_category_id");
-	String name = rs.getString("name");
-    out.print( " 일련번호 : " + help_category_id + "이름 : " + name + "<br><br>" );  }
+	int id = rs.getInt("acc_id");
+	String fname = rs.getString("acc_first_name");
+	String lname = rs.getString("acc_last_name");
+	String email = rs.getString("acc_email");
+	
+    out.print( " 일련번호 : " + id + "<br>" );
+    out.print( " f이름 : " + fname + "<br>" );
+    out.print( " l이름 : " + lname + "<br>" );
+    out.print( " 이메일: " + email + "<br>" );
+    
+  
+  }
 }
 catch( SQLException e )
 {

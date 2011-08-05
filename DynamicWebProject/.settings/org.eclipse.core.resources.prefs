@@ -1,5 +1,8 @@
-#Fri Jul 29 00:36:11 KST 2011
+#Tue Aug 02 11:11:50 KST 2011
 eclipse.preferences.version=1
+encoding//WebContent/WEB_INF/properties/ibatis2common.properties=UTF-8
+encoding//WebContent/WEB_INF/properties/log4j.properties=UTF-8
+encoding//WebContent/WEB_INF/sql/mysql/Account.ddl=MS949
 encoding//WebContent/program/ajax/ajax.jsp=UTF-8
 encoding//WebContent/program/ajax/json.jsp=UTF-8
 encoding//WebContent/program/iframe/iframe.jsp=UTF-8
