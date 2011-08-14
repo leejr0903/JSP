@@ -12,12 +12,5 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/commons-collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/commons-dbcp-1.4.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/commons-pool-1.5.6.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/mysql-connector-java-5.1.17-bin.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB_INF/lib/ibatis-2.3.4.726.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB_INF/classes"/>
 </classpath>
