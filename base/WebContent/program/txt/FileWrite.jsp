@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
-    
+
 <%@ page import="java.io.*" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -12,7 +12,7 @@
 
 <%
 //File file = new File(request.getSession().getServletContext().getRealPath("/program/unccd/lodging/data/"), "temp" + ".txt");
-File file = new File("D:/JSP/Git/JSP/DynamicWebProject/WebContent/program/File", "temp" + ".txt");
+File file = new File("D:/JSP/Git/JSP/base/WebContent/program/txt/data", "temp" + ".txt");
 
 BufferedWriter writer = null;
 try{
@@ -30,8 +30,7 @@ try{
 }
 //response.sendRedirect("FileRead.jsp");
 %>
-<script>
-alert("받은 값 : " + <%=request.getParameter("txt1")%> + "  ==> 입력 성공!!");
+<script type="text/javascript">
 location.href = "FileRead.jsp";
 </script>
 

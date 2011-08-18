@@ -12,7 +12,7 @@
 
 <%
 //File file = new File(request.getSession().getServletContext().getRealPath("/program/unccd/lodging/txt/"), "temp" + ".txt");
-File file = new File("D:/JSP/Git/JSP/DynamicWebProject/WebContent/program/File", "temp" + ".txt");
+File file = new File("D:/JSP/Git/JSP/base/WebContent/program/txt/data", "temp" + ".txt");
 
 BufferedReader reader = null;
 
@@ -25,6 +25,7 @@ if(file.exists()){
 		%>
 <form action="FileWrite.jsp" method="get">
 <table>
+
 	<tr>
 		<td>
 			<input type="text" name="txt1" value="<%=line%>"/>
@@ -32,7 +33,7 @@ if(file.exists()){
 	</tr>
 	<tr>
 		<td>
-			<input type="submit" value="°í" />
+			<input type="submit" value="°í" /> 
 		</td>
 	</tr>
 </table>

@@ -1,19 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>ajax.jsp</title>
 
-<script type="text/javascript" src="/DynamicWebProject/program/includejs/jquery-1.6.2.js"></script>
+<script type="text/javascript" src="/base/program/includejs/jquery-1.6.2.js"></script>
 <script type="text/javascript">
 $(function(){
 	$(document.forms.ajax_action.go_ajax).change(function(){
 	
 		$.getJSON("json.jsp",
-				{
+				{ 
 				// 한글을 넘기면 깨지는 현상이 발생
-		    	pj_sno: $("#lblgo_ajax").val()
+		    	pj_sno: escape($("#lblgo_ajax").val())
 				},
 				  function(data) {
 					
@@ -28,7 +29,7 @@ $(function(){
 					
 					var options = '';
 					for(var i=0; i <data.length; i++) {
-						options += '<option value="' + data[i].val + '">' + data[i].name + '</option>';
+						options += '<option value="' + data[i].val + '">' + unescape(data[i].name) + '</option>';
 					}
 					$("select#lblchange_ajax").html(options);
 					
