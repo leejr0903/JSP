@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr" pageEncoding="euc-kr"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
 <title>ajax.jsp</title>
 
 <script type="text/javascript" src="/base/program/includejs/jquery-1.6.2.js"></script>
@@ -13,18 +13,18 @@ $(function(){
 	
 		$.getJSON("json.jsp",
 				{ 
-				// í•œê¸€ì„ ë„˜ê¸°ë©´ ê¹¨ì§€ëŠ” í˜„ìƒì´ ë°œìƒ
+				// ÇÑ±ÛÀ» ³Ñ±â¸é ±úÁö´Â Çö»óÀÌ ¹ß»ı
 		    	pj_sno: escape($("#lblgo_ajax").val())
 				},
 				  function(data) {
 					
-					// ì½˜ì†”ì—ì„œ ë³´ê¸°
+					// ÄÜ¼Ö¿¡¼­ º¸±â
 					/*
 					for(var i=0; i <data.length; i++) {
 						console.log(data[i].val + " " + data[i].name);
 					}*/
 					
-					// option ì¶œë ¥
+					// option Ãâ·Â
 					// option+=
 					
 					var options = '';
@@ -34,9 +34,49 @@ $(function(){
 					$("select#lblchange_ajax").html(options);
 					
 					
-					// option ì¶œë ¥
-					// IE7,8ì—ì„œ ë™ì‘ ì•ˆí•¨
-					// jquery ë¬¸ë²•
+					// option Ãâ·Â
+					// IE7,8¿¡¼­ µ¿ÀÛ ¾ÈÇÔ
+					// jquery ¹®¹ı
+					/*
+					$('#lbltask_sno').empty();
+					  
+					$.each(data, function(key, item){
+						$('#lblchange_ajax').append(new Option(item.name, item.val, true, true));
+					    });
+					$("#lbltask_sno").val(0).attr("selected", "selected");
+ 						*/
+				  });
+	});
+});
+
+$(function(){
+	$(document.forms.ajax_action.change_ajax).change(function(){
+
+		$.getJSON("json.jsp",
+				{
+				// ÇÑ±ÛÀ» ³Ñ±â¸é ±úÁö´Â Çö»óÀÌ ¹ß»ı
+		    	pj_sno: $("#lblchange_ajax").val()
+				},
+				  function(data) {
+					
+					// ÄÜ¼Ö¿¡¼­ º¸±â
+					/*
+					for(var i=0; i <data.length; i++) {
+						console.log(data[i].val + " " + data[i].name);
+					}*/
+					
+					// option Ãâ·Â
+					// option+=
+					var options = '';
+					for(var i=0; i <data.length; i++) {
+						options += '<option value="' + data[i].val + '">' + data[i].name + '</option>';
+					}
+					$("select#lblchange_ajax2").html(options);
+					
+					
+					// option Ãâ·Â
+					// IE7,8¿¡¼­ µ¿ÀÛ ¾ÈÇÔ
+					// jquery ¹®¹ı
 					/*
 					$('#lbltask_sno').empty();
 					  
@@ -61,23 +101,34 @@ $(function(){
 	</th>
 	<td>
 		<select name="go_ajax" id="lblgo_ajax" class="" >
-				<option value="">ì„ íƒ</option>
-				<option value="í•œê¸€" >í•œê¸€</option>
-				<option value="english" >ì˜ì–´</option>
-				<option value="9999" >ìˆ«ì</option>
+				<option value="">¼±ÅÃ</option>
+				<option value="ÇÑ±Û" >ÇÑ±Û</option>
+				<option value="english" >¿µ¾î</option>
+				<option value="9999" >¼ıÀÚ</option>
 		</select>
 	</td>
 </tr>
 
 <tr>
 	<th scope="row" class="">
-		<label class="head" for="lblchange_ajax"> Change Ajax</label>
+		<label class="head" for="lblchange_ajax"> Change Ajax1</label>
 	</th>
 	<td>
 	<select name="change_ajax" id="lblchange_ajax" >
 	<option value="">Change Ajax</option>
 	</select>
 	</td>
+</tr>
+<tr>
+	<th scope="row" class="">
+		<label class="head" for="lblchange_ajax"> Change Ajax2</label>
+	</th>
+	<td>
+	<select name="change_ajax2" id="lblchange_ajax2" >
+	<option value="">Change Ajax</option>
+	</select>
+	</td>
+
 </tr>
 </table>
 </form>
