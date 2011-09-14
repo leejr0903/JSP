@@ -15,8 +15,8 @@
 	            System.out.println(ce);
 	        }
 	        try {
-				connect = DriverManager.getConnection("jdbc:oracle:thin:@210.104.249.110:1521:TOTGSND", "iave", "iave#2010");
-	            statement = connect.prepareStatement("select * from TBL_BONGSA_APP");
+				connect = DriverManager.getConnection("jdbc:oracle:thin:@...::", "", "");
+	            statement = connect.prepareStatement("select * from ");
 	            resultSet = statement.executeQuery();
 				
 						
