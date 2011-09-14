@@ -20,6 +20,8 @@
 		//SimpleDateFormat.parse()메소드를 통해 Date객체를 생성한다.
 		//SimpleDateFormat.parse()메소드는 입력한 문자열 형식의 날짜가
 		//포맷과 다를경우 java.text.ParseException을 발생한다.
+		
+		// 일부 적용이 안되는 부분이 발생하므로 다른 방법을 사용하기를 바람 
 		java.util.Date date = format.parse(textDate);
 
 		//위에서 만든 date객체가 정말 7월22일인지 확인 해보자.

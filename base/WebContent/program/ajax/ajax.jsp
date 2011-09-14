@@ -34,6 +34,11 @@ $(function(){
 					$("select#lblchange_ajax").html(options);
 					
 					
+					
+					for(var i=0; i <data.length; i++) {
+						$("#lbltitle").val(data[i].val);
+					}
+					
 					// option 출력
 					// IE7,8에서 동작 안함
 					// jquery 문법
@@ -121,15 +126,23 @@ $(function(){
 </tr>
 <tr>
 	<th scope="row" class="">
-		<label class="head" for="lblchange_ajax"> Change Ajax2</label>
+		<label class="head" for="lblchange_ajax2"> Change Ajax2</label>
 	</th>
 	<td>
 	<select name="change_ajax2" id="lblchange_ajax2" >
 	<option value="">Change Ajax</option>
 	</select>
 	</td>
-
 </tr>
+<tr>
+	<th scope="row" class="">
+		<label class="head" for="lbltitle">change ajax text</label>
+	</th>
+	<td>
+		<input type="text" name="title" id="lbltitle" />
+	</td>
+</tr>
+
 </table>
 </form>
 
