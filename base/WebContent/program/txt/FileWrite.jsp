@@ -18,7 +18,7 @@ BufferedWriter writer = null;
 try{
 	writer = new BufferedWriter(new OutputStreamWriter (new FileOutputStream(file),"utf-8"));
 	StringBuffer sbBuffer = new StringBuffer();
-	sbBuffer.append(request.getParameter("content"));
+	sbBuffer.append(request.getParameter("txt1"));
 	writer.write(sbBuffer.toString());
 } catch(UnsupportedEncodingException ue){
  	out.println("Not supported : ");
